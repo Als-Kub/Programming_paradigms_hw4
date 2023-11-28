@@ -28,8 +28,8 @@ def pearson_correlation(arr_1, arr_2):
     mean_x = sum(arr_1) / n
     mean_y = sum(arr_2) / n
 
-    variance_x = sum([(xi - mean_x) ** 2 for xi in array_1]) / float(len(arr_1))
-    variance_y = sum([(yi - mean_y) ** 2 for yi in array_2]) / float(len(arr_2))
+    variance_x = sum([(xi - mean_x) ** 2 for xi in arr_1]) / float(len(arr_1))
+    variance_y = sum([(yi - mean_y) ** 2 for yi in arr_2]) / float(len(arr_2))
 
     covariance = sum([(xi - mean_x) * (yi - mean_y) for xi, yi in zip(arr_1, arr_2)]) / float(len(arr_1))
     correlation = covariance / (math.sqrt(variance_x * variance_y))
