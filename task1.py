@@ -18,15 +18,11 @@ import math
 
 def pearson_correlation(arr_1, arr_2):
 
-    # Проверка на равную массивы одинаковой длины
     if len(arr_1) != len(arr_2):
         raise ValueError("Error - Different length of arrays")
 
-    n = len(arr_1)
-
-    # Расчет среднего значения
-    mean_x = sum(arr_1) / n
-    mean_y = sum(arr_2) / n
+    mean_x = sum(arr_1) / len(arr_1)
+    mean_y = sum(arr_2) / len(arr_1)
 
     variance_x = sum([(xi - mean_x) ** 2 for xi in arr_1]) / float(len(arr_1))
     variance_y = sum([(yi - mean_y) ** 2 for yi in arr_2]) / float(len(arr_2))
